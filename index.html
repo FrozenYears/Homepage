@@ -101,9 +101,9 @@
 	</style>
 	<script>
 		var time = 0;
-		var a = true;
+		var l = true;
 		function refresh() {
-			a = setInterval(function(){
+			t = setInterval(function(){
 			time = time + 1;
 			document.getElementById("time").innerHTML = String((time%600000)/60000 | 0) + String((time%60000)/6000 | 0) + ":" + String((time%6000)/1000 | 0) + String((time%1000)/100 | 0) + "." + String((time%100)/10 | 0) + time%10;
 			},10)
@@ -112,7 +112,7 @@
 			refresh();
 		}
 		function stop() {
-			clearInterval(a);
+			clearInterval(t);
 		}
 		function reset() {
 			stop();
@@ -120,12 +120,12 @@
 			document.getElementById("time").innerHTML = String((time%600000)/60000 | 0) + String((time%60000)/6000 | 0) + ":" + String((time%6000)/1000 | 0) + String((time%1000)/100 | 0) + "." + String((time%100)/10 | 0) + time%10;
 		}
 		function like() {
-			if (a) {
+			if (l) {
 				document.getElementById('like').innerHTML='<i class="heart icon"></i> Like'
-				a = false;
+				l = false;
 			} else {
 				document.getElementById('like').innerHTML='<i class="heart outline icon"></i> Like'
-				a = true;
+				l = true;
 			}
 		}
 	</script>
