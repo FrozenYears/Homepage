@@ -102,29 +102,31 @@
 	<script>
 		var time = 0;
 		var l = true;
-		function refresh() {
+		function Refresh() {
 			t = setInterval(function(){
 			time = time + 1;
-			document.getElementById("time").innerHTML = String((time%600000)/60000 | 0) + String((time%60000)/6000 | 0) + ":" + String((time%6000)/1000 | 0) + String((time%1000)/100 | 0) + "." + String((time%100)/10 | 0) + time%10;
+			document.getElementById('time').innerHTML = String((time%600000)/60000 | 0) + String((time%60000)/6000 | 0) + ":" + String((time%6000)/1000 | 0) + String((time%1000)/100 | 0) + "." + String((time%100)/10 | 0) + time%10;
 			},10)
 		}
-		function start() {
-			refresh();
+		function Start() {
+			Refresh();
+			document.getElementById('start').removeAttribute('onclick');
 		}
-		function stop() {
+		function Stop() {
 			clearInterval(t);
+			document.getElementById('start').setAttribute('onclick', "Start()");
 		}
-		function reset() {
+		function Reset() {
 			stop();
 			time = 0;
-			document.getElementById("time").innerHTML = String((time%600000)/60000 | 0) + String((time%60000)/6000 | 0) + ":" + String((time%6000)/1000 | 0) + String((time%1000)/100 | 0) + "." + String((time%100)/10 | 0) + time%10;
+			document.getElementById('time').innerHTML = String((time%600000)/60000 | 0) + String((time%60000)/6000 | 0) + ":" + String((time%6000)/1000 | 0) + String((time%1000)/100 | 0) + "." + String((time%100)/10 | 0) + time%10;
 		}
 		function like() {
 			if (l) {
-				document.getElementById('like').innerHTML='<i class="heart icon"></i> Like'
+				document.getElementById('like').innerHTML = '<i class="heart icon"></i> Like';
 				l = false;
 			} else {
-				document.getElementById('like').innerHTML='<i class="heart outline icon"></i> Like'
+				document.getElementById('like').innerHTML = '<i class="heart outline icon"></i> Like';
 				l = true;
 			}
 		}
@@ -135,24 +137,23 @@
 		<h1>FrozenYears's Homepage</h1>
 	</header>
 	<div class="main">
-			<div style="text-align: center;">
-				<!-- <img src="https://gitea.whitrayhb.top:19960/FrozenYears/Homework/raw/branch/main/img/%E6%A0%A1%E5%BE%BD.png" width=25%> -->
-			</div>
 			<div class="title">
-				Self-introduction
+				Self-introduction | 介绍
 			</div>
 			<div class="content">
-				<p class="intro">咕~</p>
+				<p class="intro">为众人抱薪者 不可使其冻毙于风雪</p>
+				<p class="intro">为自由开路者 不可使其困顿于荆棘</p>
+				<p class="intro">为生民立命者 不可使其殒殁于无声</p>
 			</div>
 			<div class="title">
-				Programs
+				Programs | 项目
 			</div>
 			<div class="content">
-				<h3 class="counter">My TimeCounter</h3>
+				<b><h3 class="counter">My TimeCounter</h3></b>
 				<strong><p id="time" class="counter">00:00.00</p></strong><br>
-				<button onclick=start() class="ui button">Start</button>
-				<button onclick=stop() class="ui button">Stop</button>
-				<button onclick=reset() class="ui button">Reset</button>
+				<button onclick=Start() class="ui button" id="start">Start</button>
+				<button onclick=Stop() class="ui button">Stop</button>
+				<button onclick=Reset() class="ui button">Reset</button>
 					<div class="ui red button" id="like" onclick="like()">
 						<i class="heart outline icon" ></i> Like
 					</div>
