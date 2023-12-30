@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!-- 预加载 -->
+		<link rel="preload" href="./style.css" as="style">
+		<link rel="preload" href="./main.js" as="script">
+		<link rel="preload" href="./Semantic-UI/semantic.min.css" as="style">
+		<!-- 外联 -->
+		<link rel="stylesheet" type="text/css" href="./style.css">
+		<link rel="stylesheet" type="text/css" href="./Semantic-UI/semantic.min.css">
+		<script src="./main.js"></script>
+		<script src="./jquery-3.1.1.min.js"></script>
+		<script src="./Semantic-UI/semantic.min.js"></script>
+		<title>FrozenYears's Homepage</title>
+		<link rel="icon" href="https://gitea.whitrayhb.top:19960/FrozenYears/Homework/raw/branch/main/img/HP-favicon.ico">
+	</head>
+	<body class="bg-img">
+		<header>
+			<h1 class="main-title">Time Counter</h1>
+		</header>
+		<div class="main">
+			<!-- 正计时 -->
+			<div class="title">
+				Reckon by Time | 正计时
+			</div>
+			<div class="content" style="text-align: center;">
+				<b><p id="time" class="counter">00:00.00</p></b><br>
+				<button onclick=start() class="ui button" id="start">Start</button>
+				<button onclick=stop() class="ui button">Stop</button>
+				<button onclick=reset() class="ui button">Reset</button>
+				<div class="ui red button" id="like" onclick="like()">
+					<i class="heart outline icon" ></i> Like
+				</div>
+			</div>
+			<!-- 倒计时 -->
+			<div class="title">
+				Count Down | 倒计时
+			</div>
+			<div class="content">
+				<p class="intro">咕咕~</p>
+			</div>
+			<!-- 返回 -->
+			<div class="title">
+				<a href="./index.html" style="display: inline-block;" previewlistener="true">
+					<span style="color: #F3F3FA;">Back | 返回</span>
+				</a>
+			</div>
+		</div>
+		<footer>
+			<div class="footer">
+				<b>Copyright © FrozenYears All Rights Reserved</b>
+			</div>
+		</footer>
+	</body>
+</html>

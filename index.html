@@ -1,162 +1,84 @@
 <!DOCTYPE html>
-
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="./Semantic-UI/semantic.min.css">
-    <script src="./jquery-3.1.1.min.js"></script>
-    <script src="./Semantic-UI/semantic.min.js"></script>
-    <title>FrozenYears's Homepage</title>
-	<style>
-		@font-face {
-			font-family: 'MV Boli';
-			src: url('./Font/MVBoli.woff2') format('woff2'),
-			font-weight: normal;
-			font-style: italic;
-			font-display: swap;
-		}
-		@font-face {
-			font-family: 'Sassoon';
-			src: url('./Font/Sassoon-Primary.woff2') format('woff2');
-			font-weight: normal;
-			font-style: italic;
-			font-display: swap;
-		}
-		@font-face {
-			font-family: 'Misans';
-			src: url('./Font/Misans-Normal.woff2') format('woff2');
-			font-weight: normal;
-			font-style: italic;
-			font-display: swap;
-		}@font-face {
-			font-family: 'HYTMR';
-			src: url('./Font/HYTangMeiRenW.woff2') format('woff2');
-			font-weight: normal;
-			font-style: italic;
-			font-display: swap;
-		}
-		body {
-			background-image: url(https://picshack.net/ib/ToEpDbGig2.jpg);
-			background-attachment: fixed;
-			background-size: cover;
-			inset: 0;
-			z-index: -1;
-			object-fit: cover;
-			margin: 0;
-		}
-		h1 {
-			font-family: 'MV Boli';
-			text-align: center;
-			color: #F3F3FA;
-			font-size: 4em;
-		}
-		div.main {
-			margin: auto;
-			background-color: rgb(32 59 96 / 70%);
-			border: #647aa3 solid;
-			border-width: 3px;
-			border-radius: 15px;
-			width: 50%;
-			padding: 25px;
-		}
-		div.title {
-			font-family: 'Sassoon';
-			letter-spacing: 1px;
-			margin-left: 1px;
-			margin-top: 5px;
-			margin-bottom: 5px;
-			max-width: fit-content;
-			padding-left: 10px;
-			padding-right: 10px;
-			padding-top: 4px;
-			padding-bottom: 4px;
-			font-size: 1.5em;
-			font-weight: bold;
-			text-align: center;
-			color: #F3F3FA;
-			background-color: #2f4392;
-			border: #647aa3 solid;
-			border-radius: 8px;
-			border-width: 3px;
-			filter: drop-shadow(0 10px 15px rgb(137 207 240 / 0.03)) drop-shadow(0 10px 15px rgb(137 207 240 / 0.08));
-		}
-		div.content {
-			margin: auto;
-			margin-bottom: 5px;
-			border: 1px;
-			padding: 2px;
-			border: rgb(76 99 139 / 90%) solid;
-			border-radius: 10px;
-			padding: 20px;
-			background-color: rgb(137 207 260 / 90%); /*#89cff0*/
-			filter: drop-shadow(0 10px 15px rgb(0 130 155 / 0.03)) drop-shadow(0 10px 15px rgb(0 130 155 / 0.08));
-		}
-		.intro {
-			font-family: 'HYTMR';
-			font-size: 1.2em;
-		}
-		.counter {
-			font-family: 'Misans';
-			font-size: 1.2em;
-		}
-	</style>
-	<script>
-		var time = 0;
-		var l = true;
-		function Refresh() {
-			t = setInterval(function(){
-			time = time + 1;
-			document.getElementById('time').innerHTML = String((time%600000)/60000 | 0) + String((time%60000)/6000 | 0) + ":" + String((time%6000)/1000 | 0) + String((time%1000)/100 | 0) + "." + String((time%100)/10 | 0) + time%10;
-			},10)
-		}
-		function Start() {
-			Refresh();
-			document.getElementById('start').removeAttribute('onclick');
-		}
-		function Stop() {
-			clearInterval(t);
-			document.getElementById('start').setAttribute('onclick', "Start()");
-		}
-		function Reset() {
-			stop();
-			time = 0;
-			document.getElementById('time').innerHTML = String((time%600000)/60000 | 0) + String((time%60000)/6000 | 0) + ":" + String((time%6000)/1000 | 0) + String((time%1000)/100 | 0) + "." + String((time%100)/10 | 0) + time%10;
-		}
-		function like() {
-			if (l) {
-				document.getElementById('like').innerHTML = '<i class="heart icon"></i> Like';
-				l = false;
-			} else {
-				document.getElementById('like').innerHTML = '<i class="heart outline icon"></i> Like';
-				l = true;
-			}
-		}
-	</script>
-</head>
-<body>
-	<header>
-		<h1>FrozenYears's Homepage</h1>
-	</header>
-	<div class="main">
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!-- 预加载 -->
+		<link rel="preload" href="./style.css" as="style">
+		<link rel="preload" href="./main.js" as="script">
+		<link rel="preload" href="./Semantic-UI/semantic.min.css" as="style">
+		<!-- 外联 -->
+		<link rel="stylesheet" type="text/css" href="./style.css">
+		<link rel="stylesheet" type="text/css" href="./Semantic-UI/semantic.min.css">
+		<script src="./main.js"></script>
+		<script src="./jquery-3.1.1.min.js"></script>
+		<script src="./Semantic-UI/semantic.min.js"></script>
+		<title>FrozenYears's Homepage</title>
+		<link rel="icon" href="https://gitea.whitrayhb.top:19960/FrozenYears/Homework/raw/branch/main/img/HP-favicon.ico">
+	</head>
+	<body id="preload-background" class="bg-img">
+		<!-- 标题 -->
+		<header>
+			<h1 class="main-title">FrozenYears's Homepage</h1>
+		</header>
+		<div class="main">
+			<!-- 介绍 -->
 			<div class="title">
-				Self-introduction | 介绍
+				Introduction | 介绍
 			</div>
 			<div class="content">
-				<p class="intro">为众人抱薪者 不可使其冻毙于风雪</p>
-				<p class="intro">为自由开路者 不可使其困顿于荆棘</p>
-				<p class="intro">为生民立命者 不可使其殒殁于无声</p>
+				<div class="head">
+					<img src="https://picshack.net/ib/eNrMTMCyYT.jpg" id="preload-head" class="ui medium circular image">
+				</div>
+				<div class="narration" style="margin-left: 1em;">
+					<p class="intro">为众人抱薪者 不可使其冻毙于风雪</p>
+					<p class="intro">为自由开路者 不可使其困顿于荆棘</p>
+					<p class="intro">为生民立命者 不可使其殒殁于无声</p>
+				</div>
 			</div>
+			<!-- 项目 -->
 			<div class="title">
 				Programs | 项目
 			</div>
 			<div class="content">
-				<b><h3 class="counter">My TimeCounter</h3></b>
-				<strong><p id="time" class="counter">00:00.00</p></strong><br>
-				<button onclick=Start() class="ui button" id="start">Start</button>
-				<button onclick=Stop() class="ui button">Stop</button>
-				<button onclick=Reset() class="ui button">Reset</button>
-					<div class="ui red button" id="like" onclick="like()">
-						<i class="heart outline icon" ></i> Like
-					</div>
+				<div class="friends">
+					<a href="./TimeCounter.html" style="display: inline-block;" previewlistener="true">
+						<img src="https://picshack.net/ib/IOlNklNE55.png" id="preload-program1" class="imgs">
+						<p style="display: inline-block;">
+							<b class="friends">TimeCounter</b><br>
+							<span class="friends">简易计时器</span>
+						</p>
+					</a>
+				</div>
+				<div class="friends">
+					<a href="./CSFZ-STA.html" style="display: inline-block;" previewlistener="true">
+						<img src="https://picshack.net/ib/DHbxs3IKwe.png" id="preload-program2" class="imgs">
+						<p style="display: inline-block;">
+							<b class="friends">CSFZ-STA</b><br>
+							<span class="friends">川师附中科学协会</span>
+						</p>
+					</a>
+				</div>
 			</div>
-	</div>
-</body>
+			<!-- 友链 -->
+			<div class="title">
+				Friends | 友链
+			</div>
+			<div class="content">
+				<div class="friends">
+					<a href="https://whitrayhb.top/index.html" style="display: inline-block;" previewlistener="true">
+						<img src="https://whitrayhb.top/static/head.png" id="preload-friend1" class="imgs">
+						<p style="display: inline-block;">
+							<b class="friends">WhitrayHB</b><br>
+							<span class="friends">一只不怎么会咕咕咕的鸽子</span>
+						</p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div class="footer">
+				<b>Copyright © FrozenYears All Rights Reserved</b>
+			</div>
+		</footer>
+	</body>
+</html>

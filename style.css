@@ -1,0 +1,180 @@
+/* font */
+@font-face {
+	font-family: 'MV Boli';
+	src: url('./font/MVBoli.woff2') format('woff2'),
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Sassoon';
+	src: url('./font/Sassoon-Primary.woff2') format('woff2');
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Misans';
+	src: url('./font/Misans-Normal.woff2') format('woff2');
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'HYTMR';
+	src: url('./font/HYTangMeiRenW.woff2') format('woff2');
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
+}
+body.bg-img {
+	background-image: url(https://picshack.net/ib/ToEpDbGig2.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+	inset: 0;
+	z-index: -1;
+	object-fit: cover;
+	margin: 0;
+}
+h1.main-title {
+	font-family: 'MV Boli';
+	text-align: center;
+	color: #F3F3FA;
+	font-size: 4em;
+}
+p.intro {
+	font-family: 'HYTMR';
+	font-size: 1.2em;
+}
+b.friends {
+	font-family: 'Misans';
+	color: black;
+	vertical-align: middle;
+	font-size: 1.5em;
+	/* display: inline-block; */
+	padding: 5px;
+}
+span.friends {
+	font-family: 'HYTMR';
+	color: black;
+	vertical-align: middle;
+	font-size: 1.2em;
+	/* display: inline-block; */
+	padding: 5px;
+}
+/* div */
+div.main {
+	margin: auto;
+	background-color: rgb(32 59 96 / 70%);
+	border: #647aa3 solid;
+	border-width: 3px;
+	border-radius: 15px;
+	width: 50%;
+	padding: 25px;
+}
+div.title {
+	font-family: 'Sassoon';
+	letter-spacing: 1px;
+	margin-left: 1px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	max-width: fit-content;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	font-size: 1.5em;
+	font-weight: bold;
+	text-align: center;
+	color: #F3F3FA;
+	background-color: #2f4392;
+	border: #647aa3 solid;
+	border-radius: 8px;
+	border-width: 3px;
+	filter: drop-shadow(0 10px 15px rgb(137 207 240 / 0.03)) drop-shadow(0 10px 15px rgb(137 207 240 / 0.08));
+}
+div.content {
+	margin: auto;
+	margin-bottom: 5px;
+	border: 1px;
+	padding: 2px;
+	border: rgb(76 99 139 / 90%) solid;
+	border-radius: 10px;
+	padding: 20px;
+	background-color: rgb(127 179 213 / 90%);
+	filter: drop-shadow(0 10px 15px rgb(0 130 155 / 0.03)) drop-shadow(0 10px 15px rgb(0 130 155 / 0.08));
+}
+div.narration {
+	display: inline-block;
+	width: 75%;
+	margin: auto;
+	margin-bottom: 5px;
+	border: 1px;
+	padding: 2px;
+	border: rgb(180 205 236 / 100%) solid;
+	border-radius: 10px;
+	padding: 20px;
+	background-color: rgb(137 207 260 / 100%); /*#89cff0*/
+	filter: drop-shadow(0 10px 15px rgb(0 130 155 / 0.03)) drop-shadow(0 10px 15px rgb(0 130 155 / 0.08));
+}
+div.friends {
+	margin: auto;
+	border: rgb(180 205 236 / 100%) solid;
+	border-radius: 10px;
+	padding: 3px;
+	background-color: rgb(137 207 260 / 100%); /*#89cff0*/
+	<!-- display: inline-block; -->
+}
+div.friends:hover {
+	background-color: #99CCFF;
+}
+div.head {
+	display: inline-block; 
+	vertical-align: top;
+	width: 20%;
+	line-height: 100%;
+}
+/* 其他 */
+.imgs {
+	vertical-align: middle;
+	margin: 10px;
+	width: 100px;
+	height: 100px;
+	display: inline-block;
+	border-radius: 8px;
+	border-width: 4px;
+}
+.counter {
+	font-family: 'Misans';
+	font-size: 1.2em;
+	letter-spacing: 1px;
+}
+.footer {
+	font-family: 'Misans';
+	animation: delayedFadeIn 1s;
+	position: relative;
+	margin-top: 20px;
+	flex: 0;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: fit-content;
+	font-size: 15px;
+	color: rgba(255,255,255,.6);
+	text-align: center;
+	text-shadow: 0 0 20px rgba(0,0,0,.8);
+	white-space: nowrap;
+}
+/*图片预加载*/
+#preload-head {
+	background: url("https://picshack.net/ib/eNrMTMCyYT.jpg") no-repeat -9999px -9999px;
+}
+#preload-program1 {
+	background: url("https://picshack.net/ib/IOlNklNE55.png") no-repeat -9999px -9999px;
+}
+#preload-program2 {
+	background: url("https://picshack.net/ib/DHbxs3IKwe.png") no-repeat -9999px -9999px;
+}
+#preload-friend1 {
+	background: url("https://whitrayhb.top/static/head.png") no-repeat -9999px -9999px;
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSFZ-STA</title>
+		<link rel="icon" href="https://gitea.whitrayhb.top:19960/FrozenYears/Homework/raw/branch/main/img/favicon.ico">
+		<style>
+			body {
+				background-image: url(https://gitea.whitrayhb.top:19960/FrozenYears/Homework/raw/branch/main/img/%E9%A3%8E%E6%99%AFBackground.jpg);
+				background-attachment: fixed;
+				background-size: cover;
+				inset: 0;
+				z-index: -1;
+					object-fit: cover;
+				margin: 0;
+			}
+			h1 {
+				text-align: center;
+				color: white;
+				font-size: 4em;
+			}
+			h2 {
+				color: #BFBFBF;
+				font-size: 2em;
+				text-align: center;
+			}
+			p.main_text {
+				margin: 1%;
+				font-size: 25px;
+			}
+			/*div.logo {
+				left: 0%;
+				margin-top: 0%;
+				display: inline-block;
+				width: fit-content;
+				text-align: center;
+				float: left;	<!--同行排列在左侧-->
+			}*/
+			div.main {
+				margin: auto;
+				background-color: rgb(164 199 245 / 70%);
+				border-radius: 15px;
+				width: 50%;
+				padding: 25px;
+			}
+			div.content {
+				margin: auto;
+				border-radius: 10px;
+				padding: 20px;
+				background-color: rgb(137 207 240 / 90%); /*#89cff0*/
+			}
+			div.back {
+				letter-spacing: 1px;
+				margin-left: 1px;
+				margin-top: 5px;
+				margin-bottom: 5px;
+				max-width: fit-content;
+				padding-left: 10px;
+				padding-right: 10px;
+				padding-top: 4px;
+				padding-bottom: 4px;
+				font-size: 1.5em;
+				font-weight: bold;
+				text-align: center;
+				color: #F3F3FA;
+				background-color: #2f4392;
+				border: #647aa3 solid;
+				border-radius: 8px;
+				border-width: 3px;
+				filter: drop-shadow(0 10px 15px rgb(137 207 240 / 0.03)) drop-shadow(0 10px 15px rgb(137 207 240 / 0.08));
+			}
+			/*div.hello {
+				background: url("https://gitea.whitrayhb.top:19960/FrozenYears/Homework/raw/branch/main/img/Pigeon%27sHead.jpg") no-repeat;
+				transition: all 0.3s ease;
+				cursor: pointer;
+			}
+			div.hello:hover {
+				background: url("https://gitea.whitrayhb.top:19960/FrozenYears/Homework/raw/branch/main/img/JB%27sHead.png") no-repeat;
+			} */
+			img.hello {
+				content: url("https://gitea.whitrayhb.top:19960/FrozenYears/Homework/raw/branch/main/img/Pigeon%27sHead.jpg");
+				/*transition: all 0.3s ease; 	过渡效果，但是没用（？*/
+			}
+			img.hello:hover {	/*鼠标悬停样式属性*/
+				content: url("https://gitea.whitrayhb.top:19960/FrozenYears/Homework/raw/branch/main/img/JB%27sHead.png");
+			}
+			#preload {		/*图片预加载*/
+				background: url("https://gitea.whitrayhb.top:19960/FrozenYears/Homework/raw/branch/main/img/JB%27sHead.png") no-repeat -9999px -9999px;
+			}
+			footer {
+				animation: delayedFadeIn 1s;
+				position: fixed;
+				bottom: 10px;
+				left: 50%;
+				transform: translateX(-50%);
+				width: fit-content;
+				font-size: 15px;
+				color: rgba(255,255,255,.6);
+				text-align: center;
+				text-shadow: 0 0 20px rgba(0,0,0,.8);
+				white-space: nowrap;
+			}
+			#footer {
+				text-align: center;
+				flex: 0;
+				color: black;
+				font-weight: bold;
+				font-size: 15px;
+			}
+			#footerBox {
+				display: inline-block;
+				padding: 3px 10px;
+				border-radius: 6px;
+				color: black;
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<!-- <img src="https://gitea.whitrayhb.top:19960/FrozenYears/Homework/raw/branch/main/img/%E6%A0%A1%E5%BE%BD-%E5%BE%BD.png" width=150> -->
+			<img src="https://gitea.whitrayhb.top:19960/FrozenYears/Homework/raw/branch/main/img/CSFZ-STA.png" width=150>
+			<h1>川师附中 科学协会</h1>
+			<h2>CSFZ-STA</h2>
+		</header>
+		<div class="main">
+			<div style="text-align: center;">
+				<img src="https://gitea.whitrayhb.top:19960/FrozenYears/Homework/raw/branch/main/img/%E6%A0%A1%E5%BE%BD.png" width=25%>
+			</div>
+			<div class="content">
+				<p class="main_text">川附科协(CSFZ-STA)由信息组、化学组、物理组、生物组构成。</p><br>
+				<p class="main_text">To be continued......</p>
+			</div>
+		</div><br><br>
+		<!-- 返回首页 -->
+		<div class="back" style="display: inline-block;">
+			<a href="./index.html">
+				<span style="color: #F3F3FA">Back | 返回</span>
+			</a>
+		</div>
+		<!-- 特别鸣谢 -->
+		<div style="text-align: right;">
+			<span style="font-size: 30px; font-weight: bold; color: white;">特别鸣谢：</span>
+			<a href="https://whitrayhb.top/">
+				<img class="hello" id="preload" style="transition: all 0.3s ease;" width=100>
+			</a>
+		</div>
+		<footer>
+			<div id="footer">
+				Copyright © CSFZ-STA All Rights Reserved
+			</div>
+		</footer>
+	</body>
+</html>
