@@ -150,6 +150,7 @@ div.head {
 	letter-spacing: 1px;
 }
 .footer {
+	letter-spacing: 1px;
 	font-family: 'Misans';
 	animation: delayedFadeIn 1s;
 	position: relative;
