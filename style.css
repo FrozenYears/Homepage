@@ -141,6 +141,13 @@ div.head {
 	width: 20%;
 	line-height: 100%;
 }
+div.contact {
+	margin: auto;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	margin-left: 15px;
+	text-align: left;
+}
 /* 其他 */
 .imgs {
 	vertical-align: middle;
