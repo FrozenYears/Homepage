@@ -27,6 +27,20 @@
 	font-style: italic;
 	font-display: swap;
 }
+@font-face {
+	font-family: 'Chunlian';
+	src: url('./font/Chunlian.woff2') format('woff2');
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Tieshan';
+	src: url('./font/Tieshan.woff2') format('woff2');
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
+}
 body.bg-img {
 	background-image: url(https://picshack.net/ib/3iOGkaMEHY.jpg);
 	background-attachment: fixed;
@@ -43,10 +57,6 @@ h1.main-title {
 	font-size: 4em;
 }
 p.intro {
-	font-family: 'HYTMR';
-	font-size: 1.2em;
-}
-p.hitokoto {
 	font-family: 'HYTMR';
 	font-size: 1.2em;
 }
@@ -69,6 +79,7 @@ span.friends {
 span.hitokoto {
 	font-family: 'HYTMR';
 	font-size: 1.2em;
+	font-color: #344966;
 }
 ul.list {
 	list-style-type: disc;
