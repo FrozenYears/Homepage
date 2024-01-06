@@ -35,6 +35,26 @@
 					<p class="intro">为众人抱薪者 不可使其冻毙于风雪</p>
 					<p class="intro">为自由开路者 不可使其困顿于荆棘</p>
 					<p class="intro">为生民立命者 不可使其殒殁于无声</p>
+					<hr>
+					<!-- 一言 -->
+					<span class="hitokoto">『</span>
+					<span id="hitokoto" class="hitokoto">
+						<a href="#" id="hitokoto_text">:D 获取中...</a>
+					</span>
+					<span class="hitokoto">』</span>
+					<script>
+						fetch('https://v1.hitokoto.cn')
+							.then(response => response.json())
+							.then(data => {
+								const hitokoto = document.querySelector('#hitokoto_text')
+								hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`
+								hitokoto.innerText = data.hitokoto
+							})
+							.catch(console.error)
+					</script>
+					<div style="padding-left: 70%;">
+						<span class="hitokoto">——Hitokoto</span>
+					</div>
 				</div>
 			</div>
 			<!-- 项目 -->

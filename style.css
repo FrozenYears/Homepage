@@ -46,6 +46,10 @@ p.intro {
 	font-family: 'HYTMR';
 	font-size: 1.2em;
 }
+p.hitokoto {
+	font-family: 'HYTMR';
+	font-size: 1.2em;
+}
 b.friends {
 	font-family: 'Misans';
 	color: black;
@@ -61,6 +65,10 @@ span.friends {
 	font-size: 1.2em;
 	/* display: inline-block; */
 	padding: 5px;
+}
+span.hitokoto {
+	font-family: 'HYTMR';
+	font-size: 1.2em;
 }
 ul.list {
 	list-style-type: disc;
