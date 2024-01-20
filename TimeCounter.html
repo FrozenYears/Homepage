@@ -37,8 +37,27 @@
 			<div class="title">
 				Count Down | 倒计时
 			</div>
-			<div class="content">
-				<p class="intro">咕咕~</p>
+			<div class="content" style="text-align: center;">
+				<b><p id="cd" class="counter">00:00</p></b><br>
+				<div class="ui labeled input">
+					<div class="ui label">
+						分
+					</div>
+					<input type="text" placeholder="0~59" style="width: 100px;" id="min">
+				</div>
+				<div class="ui labeled input">
+					<div class="ui label">
+						秒
+					</div>
+					<input type="text" placeholder="0~59" style="width: 100px;" id="second">
+				</div>
+				<br><br>
+				<button onclick=cdstart() class="ui button" id="cdstart">Start</button>
+				<button onclick=cdstop() class="ui button" id="cdstop">Stop</button>
+				<button onclick=cdreset() class="ui button">Reset</button>
+				<div class="ui red button" id="cdlike" onclick="cdlike()">
+					<i class="heart outline icon" ></i> Like
+				</div>
 			</div>
 			<!-- 返回 -->
 			<div class="title">
@@ -49,7 +68,10 @@
 		</div>
 		<footer>
 			<div class="footer">
-				<b>Copyright © FrozenYears All Rights Reserved</b>
+				<nav>
+					<a href="https://notbyai.fyi/"><img src="https://picshack.net/ib/UyTgxy7omF.png" width=100></a>
+				</nav>
+				<strong>Copyright © FrozenYears All Rights Reserved</strong>
 			</div>
 		</footer>
 	</body>

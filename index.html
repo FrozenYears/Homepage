@@ -38,24 +38,30 @@
 					<p class="intro">为生民立命者 不可使其殒殁于无声</p>
 					<br>
 					<!-- <hr> -->
+					<p class="intro">结庐在人境 而无车马喧</p>
+					<p class="intro">问君何能尔 心远地自偏</p>
+					<br>
+					<p class="intro">浮世三千，吾爱有三，日月与卿。日为朝，月为暮，卿为朝朝暮暮</p>
+					<br>
+					<p class="intro">夫英雄者，胸怀大志，腹有良谋，有包藏宇宙之机，吞吐天地之志者也</p>
+					<br>
+					<p class="intro">以吾身入其中而涵泳玩索之</p>
+					<br>
+					<p class="intro">手握日月摘星辰 世间无我这般人</p>
+					<br>
 					<!-- 一言 -->
-					<span class="hitokoto">『</span>
-					<span id="hitokoto" class="hitokoto">
-						<a href="#" id="hitokoto_text" style="color: #003366;">:D 获取中...</a>
-					</span>
-					<span class="hitokoto">』</span>
-					<script>
-						fetch('https://v1.hitokoto.cn')
-							.then(response => response.json())
-							.then(data => {
-								const hitokoto = document.querySelector('#hitokoto_text')
-								hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`
-								hitokoto.innerText = data.hitokoto
-							})
-							.catch(console.error)
-					</script>
-					<div style="padding-left: 70%;">
-						<span class="hitokoto">——Hitokoto</span>
+					<div class="hitokoto">
+						<span class="hitokoto">『</span>
+						<span id="hitokoto" class="hitokoto">
+							<a href="#" id="hitokoto_text" style="color: #003366;">:D 获取中...</a>
+						</span>
+						<span class="hitokoto">』</span>
+						<script>
+							hitokoto();
+						</script>
+						<div style="text-align: right;">
+							<a onclick=hitokoto() style="color: black;" title="刷新一言"><span class="hitokoto">——Hitokoto</span></a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -91,7 +97,10 @@
 			<div class="content">
 				<div class="friends">
 					<div class="contact">
-						<a href="https://github.com/FrozenYears"><img alt="Static Badge" src="https://img.shields.io/badge/Github-FrozenYears-3875ff"></a>
+						<a href="https://github.com/FrozenYears"><img alt="Static Badge" src="https://img.shields.io/badge/Github-FrozenYears-3875ff" width=150></a>
+						<br>
+						<br>
+						<a href="https://qm.qq.com/q/hWsffYFGzC"><img alt="Static Badge" src="https://img.shields.io/badge/QQ-727414023(%E6%95%B4%E6%B4%BB%E5%B0%8F%E5%8F%B7)-3875ff" width=150></a>
 					</div>
 				</div>
 			</div>
@@ -113,10 +122,10 @@
 		</div>
 		<footer>
 			<div class="footer">
-				<b>Copyright © FrozenYears All Rights Reserved</b>
 				<nav>
-					<img src="https://picshack.net/ib/UyTgxy7omF.png" width=100>
+					<a href="https://notbyai.fyi/"><img src="https://picshack.net/ib/UyTgxy7omF.png" width=100></a>
 				</nav>
+				<strong>Copyright © FrozenYears All Rights Reserved</strong>
 			</div>
 		</footer>
 	</body>

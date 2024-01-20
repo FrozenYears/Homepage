@@ -167,6 +167,9 @@ div.contact {
 	margin-left: 15px;
 	text-align: left;
 }
+div.hitokoto {
+	width: fit-content;
+}
 /* 其他 */
 .imgs {
 	vertical-align: middle;
@@ -179,7 +182,7 @@ div.contact {
 }
 .counter {
 	font-family: 'Misans';
-	font-size: 1.2em;
+	font-size: 1.5em;
 	letter-spacing: 1px;
 }
 .footer {
