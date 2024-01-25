@@ -50,7 +50,7 @@ function cdrefresh() {
 			t = t - 10;
 			document.getElementById('cd').innerHTML = String((t%6000000)/600000 | 0) + String((t%600000)/60000 | 0) + ":" + String((t%60000)/10000 | 0) + String((t%10000)/1000 | 0);
 		} 
-		if (t == 0) {
+		if (t - 1000 == 0) {
 			music.play();
 			cdreset();
 			clearInterval(cdInt);
@@ -60,12 +60,12 @@ function cdrefresh() {
 function cdstart() {
 	var m = document.getElementById('min').value;
 	var n = document.getElementById('second').value;
-	if (m >= 0 & m <= 59 & n >= 0 & n <= 59 & m + n != 0) {
-		t = m * 60000 + n * 1000;
+	if (m >= 0 & m <= 60 & n >= 0 & n <= 60 & m + n != 0 & m % 1 == 0 & n % 1 == 0 & !(m == 60 & n > 0)) {
+		t = m * 60000 + n * 1000 + 1000;
 		cdrefresh();
 		document.getElementById('cdstart').removeAttribute('onclick');
 	} else {
-		alert('请输入范围为0~59的值');
+		alert('请输入范围为0~60的整数 最大计时60分钟');
 	}
 }
 function cdstop() {
